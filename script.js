@@ -35,7 +35,7 @@ function calcGrossPrice(netPrice, taxRate) {
 console.log(calcGrossPrice(20, 0.19));
 console.log(calcGrossPrice(40, 0.16));
 
-function addPositive(first = Number, second = Number) {
+function addPositive(first, second) {
   const result = Math.abs(first) + Math.abs(second);
   return result;
 }
@@ -43,3 +43,5 @@ console.log(addPositive(2, 3));
 console.log(addPositive(3, -5));
 console.log(addPositive(-1, -8));
 console.log(addPositive(-1.5, -7));
+console.log(addPositive("-1.5", "-7"));
+console.log(addPositive("foo", "-bar"));
