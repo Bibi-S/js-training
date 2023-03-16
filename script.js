@@ -49,10 +49,28 @@ console.log(addPositive("foo", "-bar"));
 
 //Variables
 
+let userName = "Brad";
+userName = "Jenna";
+
+function getUserNameLength(userName) {
+  let result = userName.length;
+  return result;
+}
+
+console.log(getUserNameLength(userName) > 4);
+
+function isString(parameter) {
+  if ((parameter = "string")) {
+    let newVar = parameter;
+    console.log(parameter);
+  }
+  return;
+}
+
 //Conditional blocks
 
 // Loops
 
-let count = 0;
-console.log(count++);
-console.log(count);
+//let count = 0;
+//console.log(count++);
+//console.log(count);
