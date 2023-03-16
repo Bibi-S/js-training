@@ -1,4 +1,4 @@
-//Variables
+//VARIABLES
 
 let userName = "Brad";
 userName = "Jenna";
@@ -7,52 +7,99 @@ function getUserNameLength(userName) {
   let result = userName.length;
   return result;
 }
-
+////////////call the function
 console.log(getUserNameLength(userName) > 4);
+////////////call the function
 
 function isString(parameter) {
-  if ((parameter = "string")) {
-    let newVar = parameter;
-    console.log(parameter);
+  if (typeof parameter === "string") {
+    return "true";
+  } else {
+    return "false";
   }
+}
+////////////call the function
+console.log(isString("Hello"));
+console.log(isString(3));
+console.log(isString(undefined));
+console.log(isString(""));
+console.log(isString("John" + "Doe"));
+console.log(isString([]));
+////////////call the function
 
-  return;
+//CONDITIONAL BLOCKS
+
+//task 01
+const size = 25;
+let result;
+
+if (size > 10 && size > 20) {
+  result = "Greater than 20";
+} else {
+  result = "Lower than 10";
 }
 
-//Conditional blocks
+console.log(result);
+//task 02
+function oddEven(oneParam) {
+  let resultMyNum;
+  if (oneParam % 2 === 0) {
+    resultMyNum = "even";
+  } else {
+    resultMyNum = "odd";
+  }
 
-// Using loops tasks
+  return resultMyNum;
+}
+console.log(oddEven(-1));
+//task 03
+function oldYoung(age) {
+  let result;
 
+  //if (typeof age !== "number" || age !== Math.abs(age)) {
+  //result = "invalid parameter";
+  //}
+  if (age < 16) {
+    result = "child";
+  } else if (age < 50) {
+    result = "young person";
+  } else if (age >= 50) {
+    result = "elder person";
+  } else if (typeof age !== "number" || age !== Math.abs(age)) {
+    result = "invalid parameter";
+  }
+  return result;
+}
+console.log(oldYoung(-1));
+console.log(oldYoung("x"));
+console.log(oldYoung(27));
+console.log(oldYoung(6));
+console.log(oldYoung(86));
+// USING LOOP
+
+//////// oddNumbers function
 function oddNumbers(firstNum, secondNum) {
-  // oddNumbers function
   let newOdd = "";
   for (let index = 0; index <= secondNum; index++) {
-    //let allNum = index;
-    //console.log(allNum);
     if (index % 2 !== 0 && index >= 0) {
-      /*  kann man als 2.Bedienung schreiben: && index === Math.abs(index)?? */
       newOdd += index + ",";
-      //console.log(newOdd);
     }
   }
-
   return newOdd.substring(0, newOdd.length - 1);
 }
+
 console.log(oddNumbers(-10, 5));
 
-// charCount function
-
+/////// charCount function
 function charCount(strWord, charWord) {
-  //let strWord = "string";
-  //let charWord = "string";
   let countChar = 0;
   for (let index = 0; index <= strWord.length; index++) {
-    // console.log(index);
     if (charWord === strWord[index]) {
       countChar++;
-      //console.log(countChar);
     }
   }
   return countChar;
 }
+console.log(charCount("hello", "l"));
 console.log(charCount("mama", "m"));
+console.log(charCount("Resümee", "e"));
