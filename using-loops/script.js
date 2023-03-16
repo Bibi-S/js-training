@@ -22,6 +22,7 @@ function charCount(strWord, charWord) {
     //let charaWord = index;
     if (charWord === index) {
       let countChar = index++;
+
       console.log(countChar);
     }
   }
