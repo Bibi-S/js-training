@@ -1,3 +1,28 @@
+//Variables
+
+let userName = "Brad";
+userName = "Jenna";
+
+function getUserNameLength(userName) {
+  let result = userName.length;
+  return result;
+}
+
+console.log(getUserNameLength(userName) > 4);
+
+function isString(parameter) {
+  if ((parameter = "string")) {
+    let newVar = parameter;
+    console.log(parameter);
+  }
+
+  return;
+}
+
+//Conditional blocks
+
+// Using loops tasks
+
 function oddNumbers(firstNum, secondNum) {
   // oddNumbers function
 
