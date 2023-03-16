@@ -41,7 +41,7 @@ console.log(oddNumbers(-10, 5));
 // charCount function
 
 function charCount(strWord, charWord) {
-  let strWord = "string";
+  //let strWord = "string";
   //let charWord = "string";
   for (let index = strWord[0]; index <= strWord.length; index++) {
     //let charaWord = index;
