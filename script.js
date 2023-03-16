@@ -64,6 +64,7 @@ function isString(parameter) {
     let newVar = parameter;
     console.log(parameter);
   }
+
   return;
 }
 
