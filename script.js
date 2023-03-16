@@ -17,6 +17,7 @@ console.log((600 + 510) / 2);
 console.log(2 + 2);
 console.log(25 / 5 === 5 && 50 / 10 === 5);
 
+//Functions
 function welcomeMsg(personName) {
   if (typeof personName === "string" && personName.length > 1) {
     return "Welcome " + personName + "!";
@@ -45,3 +46,13 @@ console.log(addPositive(-1, -8));
 console.log(addPositive(-1.5, -7));
 console.log(addPositive("-1.5", "-7"));
 console.log(addPositive("foo", "-bar"));
+
+//Variables
+
+//Conditional blocks
+
+// Loops
+
+let count = 0;
+console.log(count++);
+console.log(count);
