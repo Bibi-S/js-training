@@ -13,9 +13,9 @@ console.log(getUserNameLength(userName) > 4);
 
 function isString(parameter) {
   if (typeof parameter === "string") {
-    return "true";
+    return true;
   } else {
-    return "false";
+    false;
   }
 }
 ////////////call the function
@@ -24,7 +24,7 @@ console.log(isString(3));
 console.log(isString(undefined));
 console.log(isString(""));
 console.log(isString("John" + "Doe"));
-console.log(isString([]));
+console.log(isString([4]));
 ////////////call the function
 
 //CONDITIONAL BLOCKS
@@ -80,7 +80,7 @@ console.log(oldYoung(86));
 //////// oddNumbers function
 function oddNumbers(firstNum, secondNum) {
   let newOdd = "";
-  for (let index = 0; index <= secondNum; index++) {
+  for (let index = firstNum; index <= secondNum; index++) {
     if (index % 2 !== 0 && index >= 0) {
       newOdd += index + ",";
     }
@@ -88,12 +88,12 @@ function oddNumbers(firstNum, secondNum) {
   return newOdd.substring(0, newOdd.length - 1);
 }
 
-console.log(oddNumbers(-10, 5));
+console.log(oddNumbers(-5, 10));
 
 /////// charCount function
 function charCount(strWord, charWord) {
   let countChar = 0;
-  for (let index = 0; index <= strWord.length; index++) {
+  for (let index = 0; index < strWord.length; index++) {
     if (charWord === strWord[index]) {
       countChar++;
     }
