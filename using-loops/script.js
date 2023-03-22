@@ -103,3 +103,74 @@ function charCount(strWord, charWord) {
 console.log(charCount("hello", "l"));
 console.log(charCount("mama", "m"));
 console.log(charCount("Resümee", "e"));
+
+//ARRAYS
+
+////// removeItem function
+
+function removeItem(paramArr, numArr) {
+  //let paramArr; //kann ich hier paraArr = []; definieren?
+  const paramArrCopy = structuredClone(paramArr);
+  paramArrCopy.splice(numArr - 1, 1);
+
+  return paramArrCopy;
+}
+const animals = ["Dog", "Cat", "Lion"];
+console.log(removeItem(animals, 1));
+
+///////sumOfCharacters function
+
+function sumOfCharacters(arr) {
+  let arrChar = 0;
+  for (let index = 0; index < arr.length; index++) {
+    if (typeof arr[index] === "string") {
+      arrChar += arr[index].length;
+    }
+  }
+  return arrChar;
+}
+
+const arr1 = ["Luke", "Anakin", true, "Obi Wan", 333];
+console.log(sumOfCharacters(arr1));
+
+const arr2 = [
+  "Code is",
+  "like humor",
+  ".",
+  "When you have",
+  "to explain it, it's bad!",
+];
+console.log(sumOfCharacters(arr2));
+// result should be: 55
+
+function whatday(num) {
+  //console.log(num);
+  let result;
+  const weekdays = [
+    ["Sunday", 1],
+    ["Monday", 2],
+    ["Tuesday", 3],
+    ["Wednesday", 4],
+    ["Thursday", 5],
+    ["Friday", 6],
+    ["Saturday", 7],
+  ];
+
+  for (let i = 0; i < weekdays.length; i++) {
+    const currentDay = weekdays[i];
+    //console.log(currentDay);
+    typeof currentDay[1] == "number";
+    typeof currentDay[0] == "string";
+    if (num === currentDay[1]) {
+      result = currentDay[0];
+    } else if (num < 1 || num > 7) {
+      result = "Wrong, please enter a number between 1 and 7";
+    }
+  }
+  return result;
+}
+console.log(whatday(1));
+console.log(whatday(2));
+console.log(whatday(3));
+console.log(whatday(8));
+console.log(whatday(20));
